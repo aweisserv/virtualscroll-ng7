@@ -1,12 +1,21 @@
 <h1 class="m-4 text-center">Virtual Scroll</h1>
 
-<cdk-virtual-scroll-viewport itemSize="30" class="list-container container mt-5">
-
-    <div *cdkVirtualFor="let persona of personas; let i = index; let conteo = count">
-        Item {{ i }} / {{ conteo }}
+<div class="row mt-5">
+    <div class="col">
+            <button (click)="primera()" type="button" class="btn btn-outline-secondary">A la primera</button>
     </div>
+    <div class="col text-center">        
+        <button (click)="centro()" type="button" class="btn btn-outline-secondary">A la mitad</button>
+    </div>
+    <div class="col d-grid gap-2 d-md-flex justify-content-md-end">        
+        <button (click)="ultima()" type="button" class="btn btn-outline-secondary">A la última</button>
+    </div>
+</div>
 
+<cdk-virtual-scroll-viewport itemSize="40" class="list-container list-group mt-2">
 
-
+    <div class="list-group-item" *cdkVirtualFor="let persona of personas; let i = index; let conteo = count">
+        Item {{ i + 1 }} / {{ conteo }}
+    </div>
 
 </cdk-virtual-scroll-viewport>
