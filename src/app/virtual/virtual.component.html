@@ -1,0 +1,12 @@
+<h1 class="m-4 text-center">Virtual Scroll</h1>
+
+<cdk-virtual-scroll-viewport itemSize="30" class="list-container container mt-5">
+
+    <div *cdkVirtualFor="let persona of personas; let i = index; let conteo = count">
+        Item {{ i }} / {{ conteo }}
+    </div>
+
+
+
+
+</cdk-virtual-scroll-viewport>
