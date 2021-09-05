@@ -8,8 +8,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class VirtualComponent implements OnInit {
 
-  @ViewChild( CdkVirtualScrollViewport ) viewport: CdkVirtualScrollViewport;
-
+  @ViewChild( CdkVirtualScrollViewport, {static:false} ) viewport: CdkVirtualScrollViewport;
   personas = Array(500).fill(0);
   
   constructor() { }
